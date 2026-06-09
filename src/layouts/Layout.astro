@@ -1,23 +1,146 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { title = "Tierpsychologie-NW" } = Astro.props;
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Professionelle tierpsychologische Beratung für Hunde, Katzen und Pferde. Verhaltenstraining, Verhaltenstherapie und individuelle Beratung." />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"/>
+
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+
+            // Toggle icon
+            const icon = menuToggle.querySelector('svg');
+            if (icon) {
+              icon.classList.toggle('rotate-90');
+            }
+          });
+
+          // Close menu when clicking on a link
+          const menuLinks = mobileMenu.querySelectorAll('a');
+          menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body class="bg-cream text-charcoal font-body">
+
+    <header class="fixed top-0 left-0 right-0 bg-cream/95 backdrop-blur-sm z-50 shadow-sm">
+      <nav class="max-w-7xl mx-auto px-6 py-4 md:px-12">
+        <div class="flex justify-between items-center">
+
+          <!-- Logo -->
+          <a href="/" class="font-heading text-2xl md:text-3xl text-olive hover:text-charcoal transition-smooth">
+            Tierpsychologie NW
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex gap-8 text-sm uppercase tracking-wider font-medium">
+            <a href="#home" class="hover:text-olive transition-smooth">Home</a>
+            <a href="#about" class="hover:text-olive transition-smooth">Über mich</a>
+            <a href="#services" class="hover:text-olive transition-smooth">Leistungen</a>
+            <a href="#philosophy" class="hover:text-olive transition-smooth">Philosophie</a>
+            <a href="#contact" class="hover:text-olive transition-smooth">Kontakt</a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button 
+            id="menu-toggle"
+            class="md:hidden p-2 hover:bg-sage/30 rounded-lg transition-smooth"
+            aria-label="Menu öffnen"
+          >
+            <svg class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 animate-fade-in">
+          <div class="flex flex-col gap-4 text-sm uppercase tracking-wider font-medium">
+            <a href="#home" class="py-2 hover:text-olive transition-smooth border-b border-sage/30">Home</a>
+            <a href="#about" class="py-2 hover:text-olive transition-smooth border-b border-sage/30">Über mich</a>
+            <a href="#services" class="py-2 hover:text-olive transition-smooth border-b border-sage/30">Leistungen</a>
+            <a href="#philosophy" class="py-2 hover:text-olive transition-smooth border-b border-sage/30">Philosophie</a>
+            <a href="#contact" class="py-2 hover:text-olive transition-smooth">Kontakt</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Spacing for fixed header -->
+    <div class="h-20"></div>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-charcoal text-cream section-padding">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+          <!-- About -->
+          <div>
+            <h3 class="font-heading text-2xl mb-4 text-sage">Tierpsychologie NW</h3>
+            <p class="text-cream/80 leading-relaxed">
+              Professionelle Beratung für ein harmonisches Zusammenleben mit Ihrem Tier.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-heading text-xl mb-4 text-sage">Schnellzugriff</h4>
+            <ul class="space-y-2 text-cream/80">
+              <li><a href="#about" class="hover:text-sage transition-smooth">Über mich</a></li>
+              <li><a href="#services" class="hover:text-sage transition-smooth">Leistungen</a></li>
+              <li><a href="#philosophy" class="hover:text-sage transition-smooth">Philosophie</a></li>
+              <li><a href="#contact" class="hover:text-sage transition-smooth">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="font-heading text-xl mb-4 text-sage">Kontakt</h4>
+            <ul class="space-y-2 text-cream/80">
+              <li>📧 info@tierpsychologie-nw.de</li>
+              <li>📱 +49 123 456 789</li>
+              <li>📍 Nordrhein-Westfalen</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-cream/20 pt-8 text-center text-cream/60 text-sm">
+          <p>&copy; {new Date().getFullYear()} Tierpsychologie NW. Alle Rechte vorbehalten.</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

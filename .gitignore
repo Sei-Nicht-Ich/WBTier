@@ -22,3 +22,26 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Copilot & AI artifacts
+.copilot/
+**/CopilotBaseline/
+**/.copilot-cache/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+.cache/
