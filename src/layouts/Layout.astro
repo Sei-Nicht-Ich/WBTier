@@ -11,6 +11,10 @@ const { title = "Tierpsychologie-NW" } = Astro.props;
     <meta name="description" content="Professionelle tierpsychologische Beratung für Hunde, Katzen und Pferde. Verhaltenstraining, Verhaltenstherapie und individuelle Beratung." />
     <title>{title}</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 
@@ -54,8 +58,15 @@ const { title = "Tierpsychologie-NW" } = Astro.props;
         <div class="flex justify-between items-center">
 
           <!-- Logo -->
-          <a href="/" class="font-heading text-2xl md:text-3xl text-olive hover:text-charcoal transition-smooth">
-            Tierpsychologie NW
+          <a href="/" class="flex items-center gap-3 group">
+            <img 
+              src="/favicon.png" 
+              alt="Tierpsychologie NW Logo" 
+              class="w-10 h-10 md:w-12 md:h-12 transition-smooth group-hover:scale-110"
+            />
+            <span class="font-heading text-xl md:text-2xl text-olive group-hover:text-charcoal transition-smooth">
+              Tierpsychologie NW
+            </span>
           </a>
 
           <!-- Desktop Navigation -->
@@ -128,8 +139,8 @@ const { title = "Tierpsychologie-NW" } = Astro.props;
             <h4 class="font-heading text-xl mb-4 text-sage">Kontakt</h4>
             <ul class="space-y-2 text-cream/80">
               <li>📧 info@tierpsychologie-nw.de</li>
-              <li>📱 +49 123 456 789</li>
-              <li>📍 Nordrhein-Westfalen</li>
+              <li>📱 +49 152 563 236 43</li>
+              <li>📍 Osnabrück, Niedersachsen</li>
             </ul>
           </div>
 

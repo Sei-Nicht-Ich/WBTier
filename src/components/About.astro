@@ -9,14 +9,13 @@
 
 	  <!-- Image Side -->
 	  <div class="relative order-2 lg:order-1">
-		<!-- Placeholder for Image -->
-		<div class="relative aspect-square rounded-2xl overflow-hidden bg-sage/30 shadow-2xl">
-		  <div class="absolute inset-0 flex items-center justify-center">
-			<div class="text-center">
-			  <div class="text-8xl mb-4">👤</div>
-			  <p class="text-olive font-medium">Ihr Profilbild hier</p>
-			</div>
-		  </div>
+		<!-- Profile Image -->
+		<div class="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+		  <img 
+			src="/BonitaCaddy.jpg" 
+			alt="Profilbild Tierpsychologie NW" 
+			class="w-full h-full object-cover"
+		  />
 		  <!-- Decorative Element -->
 		  <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-olive/20 rounded-full blur-2xl"></div>
 		</div>
@@ -44,16 +43,27 @@
 		  Über mich
 		</p>
 
-		<!-- Heading -->
-		<h2 class="font-heading text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-		  Ihre Expertin für
-		  <span class="text-olive">Tierverhalten</span>
-		</h2>
+		<!-- Heading mit Profilbild Bubble -->
+		<div class="flex items-start gap-4 mb-6">
+		  <h2 class="font-heading text-4xl md:text-5xl text-charcoal leading-tight flex-1">
+			Ihre Expertin für
+			<span class="text-olive">Tierverhalten</span>
+		  </h2>
+
+		  <!-- Profilbild Bubble - immer sichtbar -->
+		  <div class="flex-shrink-0">
+			<img 
+			  src="/profileImg.jpeg" 
+			  alt="Nina - Tierpsychologin" 
+			  class="w-28 h-28 md:w-40 md:h-40 rounded-full object-cover border-4 border-sage/40 shadow-xl hover:scale-110 transition-smooth"
+			/>
+		  </div>
+		</div>
 
 		<!-- Description -->
 		<div class="space-y-4 text-charcoal/80 leading-relaxed mb-8">
 		  <p>
-			Mein Name ist <strong>Ihr Name</strong> und ich bin zertifizierte 
+			Mein Name ist <strong>Nina</strong> und ich bin zertifizierte 
 			Tierpsychologin mit Leidenschaft für das Verständnis und die 
 			Begleitung von Tieren und ihren Menschen.
 		  </p>

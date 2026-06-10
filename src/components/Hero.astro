@@ -1,5 +1,6 @@
 ---
 // Hero Section - Eindrucksvoller Einstieg
+import ServiceIconBubble from './ServiceIconBubble.astro';
 ---
 
 <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -46,20 +47,35 @@
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto">
 
 	  <div class="flex flex-col items-center animate-slide-in">
-		<div class="text-4xl mb-3">🐕</div>
-		<h3 class="font-heading text-xl text-charcoal mb-2">Hunde</h3>
+		<ServiceIconBubble 
+		  imagePath="/animals/Boris2.jpeg"
+		  fallbackEmoji="🐕"
+		  alt="Hunde"
+		  size="large"
+		/>
+		<h3 class="font-heading text-xl text-charcoal mb-2 mt-4">Hunde</h3>
 		<p class="text-charcoal/70 text-sm">Verhaltensanalyse & Training</p>
 	  </div>
 
 	  <div class="flex flex-col items-center animate-slide-in" style="animation-delay: 0.1s;">
-		<div class="text-4xl mb-3">🐱</div>
-		<h3 class="font-heading text-xl text-charcoal mb-2">Katzen</h3>
+		<ServiceIconBubble 
+		  imagePath="/animals/Murloc1.jpg"
+		  fallbackEmoji="🐱"
+		  alt="Katzen"
+		  size="large"
+		/>
+		<h3 class="font-heading text-xl text-charcoal mb-2 mt-4">Katzen</h3>
 		<p class="text-charcoal/70 text-sm">Problemverhalten lösen</p>
 	  </div>
 
 	  <div class="flex flex-col items-center animate-slide-in" style="animation-delay: 0.2s;">
-		<div class="text-4xl mb-3">🐴</div>
-		<h3 class="font-heading text-xl text-charcoal mb-2">Pferde</h3>
+		<ServiceIconBubble 
+		  imagePath="/animals/CaddyGelbClose.jpg"
+		  fallbackEmoji="🐴"
+		  alt="Pferde"
+		  size="large"
+		/>
+		<h3 class="font-heading text-xl text-charcoal mb-2 mt-4">Pferde</h3>
 		<p class="text-charcoal/70 text-sm">Beziehungsarbeit & Vertrauen</p>
 	  </div>
 
