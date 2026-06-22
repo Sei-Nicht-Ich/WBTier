@@ -1,15 +1,20 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  /* Custom Colors */
-  --color-cream: #f5f1e8;
-  --color-sage: #dce6c8;
-  --color-olive: #b7bea5;
-  --color-charcoal: #3a3a3a;
+@layer base {
+  /* Custom CSS Variables */
+  :root {
+    /* Custom Colors */
+    --color-cream: #f5f1e8;
+    --color-sage: #dce6c8;
+    --color-olive: #b7bea5;
+    --color-charcoal: #3a3a3a;
 
-  /* Custom Fonts */
-  --font-heading: "Playfair Display", ui-serif, serif;
-  --font-body: Montserrat, ui-sans-serif, sans-serif;
+    /* Custom Fonts */
+    --font-heading: "Playfair Display", ui-serif, serif;
+    --font-body: Montserrat, ui-sans-serif, sans-serif;
+  }
 }
 
 /* Global Styles */
