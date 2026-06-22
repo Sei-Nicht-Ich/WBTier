@@ -1,0 +1,10 @@
+# robots.txt für Tierpsychologie NW
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.tierpsychologie-nw.com/sitemap-index.xml
+
+# Crawl-delay für höfliches Crawling
+Crawl-delay: 1
