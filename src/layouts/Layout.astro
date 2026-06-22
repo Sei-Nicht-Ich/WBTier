@@ -1,100 +1,25 @@
 ---
 import '../styles/global.css';
 
-interface Props {
-  title?: string;
-  description?: string;
-  image?: string;
-  canonical?: string;
-}
-
-const { 
-  title = "Tierpsychologie NW - Professionelle Beratung für Ihr Tier",
-  description = "Professionelle tierpsychologische Beratung für Hunde, Katzen und Pferde. Verhaltenstraining, Verhaltenstherapie und individuelle Beratung in Osnabrück und Umgebung.",
-  image = "/favicon.png",
-  canonical = Astro.url.pathname
-} = Astro.props;
-
-const siteUrl = "https://www.tierpsychologie-nw.com";
-const fullCanonicalUrl = new URL(canonical, siteUrl).href;
-const fullImageUrl = new URL(image, siteUrl).href;
+const { title = "Tierpsychologie-NW" } = Astro.props;
 ---
 
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
+    <meta name="description" content="Professionelle tierpsychologische Beratung für Hunde, Katzen und Pferde. Verhaltenstraining, Verhaltenstherapie und individuelle Beratung." />
     <title>{title}</title>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href={fullCanonicalUrl} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={fullCanonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={fullImageUrl} />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:site_name" content="Tierpsychologie NW" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={fullCanonicalUrl} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={fullImageUrl} />
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Tierpsychologie NW" />
-    <meta name="keywords" content="Tierpsychologie, Verhaltenstherapie, Hunde, Katzen, Pferde, Osnabrück, Verhaltenstraining, Tierverhalten" />
-
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Tierpsychologie NW",
-      "description": "Professionelle tierpsychologische Beratung für Hunde, Katzen und Pferde",
-      "url": "https://www.tierpsychologie-nw.com",
-      "telephone": "+49-152-563-236-43",
-      "email": "info@tierpsychologie-nw.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Osnabrück",
-        "addressRegion": "Niedersachsen",
-        "addressCountry": "DE"
-      },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "52.2799",
-          "longitude": "8.0472"
-        },
-        "geoRadius": "50000"
-      },
-      "priceRange": "€€",
-      "image": "https://www.tierpsychologie-nw.com/favicon.png",
-      "serviceType": [
-        "Tierpsychologie",
-        "Verhaltenstherapie für Hunde",
-        "Verhaltenstherapie für Katzen",
-        "Verhaltenstherapie für Pferde",
-        "Verhaltenstraining"
-      ]
-    })} />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"/>
 
     <script>
