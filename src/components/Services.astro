@@ -7,23 +7,38 @@
 
 	<!-- Section Header -->
 	<div class="text-center mb-16 relative">
-	  <!-- Dekorative Bubbles neben Headline -->
-	  <div class="absolute -top-4 left-4 md:left-8 w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl border-4 border-sage/40 hover:scale-110 hover:rotate-3 transition-all duration-500">
-		<img src="/animals/Murloc1.jpg" alt="Dekoratives Tierbild" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+	  <!-- Dekoratives Bild oben (nur sehr kleine Screens) -->
+	  <div class="flex justify-center mb-6 sm:hidden">
+		<div class="w-24 h-24 rounded-full overflow-hidden shadow-xl border-4 border-sage/40 hover:scale-110 hover:rotate-3 transition-all duration-500">
+		  <img src="/animals/Murloc1.jpg" alt="Dekoratives Tierbild" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+		</div>
 	  </div>
-	  <div class="absolute -top-4 right-4 md:right-8 w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl border-4 border-sage/40 hover:scale-110 hover:rotate-3 transition-all duration-500">
-		<img src="/animals/BonitaLiegen.jpg" alt="Dekoratives Tierbild" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
-	  </div>
+
 	  <p class="text-olive uppercase tracking-widest text-sm font-medium mb-4">
 		Meine Leistungen
 	  </p>
 	  <h2 class="font-heading text-4xl md:text-5xl text-charcoal mb-6">
 		Wie ich Ihnen helfen kann
 	  </h2>
-	  <p class="text-charcoal/70 text-lg max-w-2xl mx-auto">
+	  <p class="text-charcoal/70 text-lg max-w-2xl mx-auto mb-6 sm:mb-0">
 		Individuelle Beratung und Training für ein harmonisches Zusammenleben 
 		mit Ihrem Tier
 	  </p>
+
+	  <!-- Dekoratives Bild unten (nur sehr kleine Screens) -->
+	  <div class="flex justify-center sm:hidden">
+		<div class="w-24 h-24 rounded-full overflow-hidden shadow-xl border-4 border-sage/40 hover:scale-110 hover:rotate-3 transition-all duration-500">
+		  <img src="/animals/BonitaLiegen.jpg" alt="Dekoratives Tierbild" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+		</div>
+	  </div>
+
+	  <!-- Seitliche Bubbles (ab sm Breakpoint) - Responsive Größen -->
+	  <div class="hidden sm:block absolute -top-4 left-2 sm:left-3 md:left-4 lg:left-8 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full overflow-hidden shadow-xl border-4 border-sage/40 hover:scale-110 hover:rotate-3 transition-all duration-500">
+		<img src="/animals/Murloc1.jpg" alt="Dekoratives Tierbild" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+	  </div>
+	  <div class="hidden sm:block absolute -top-4 right-2 sm:right-3 md:right-4 lg:right-8 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full overflow-hidden shadow-xl border-4 border-sage/40 hover:scale-110 hover:rotate-3 transition-all duration-500">
+		<img src="/animals/BonitaLiegen.jpg" alt="Dekoratives Tierbild" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+	  </div>
 	</div>
 
 	<!-- Services Grid -->
