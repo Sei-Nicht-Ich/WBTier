@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "^13.7.0",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^6.4.8",
+    "astro": "^5.18.2",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.15",
     "postcss-load-config": "^6.0.1",
